@@ -1,2 +1,3 @@
 # leetCode_practice
- practicing git and leetcode
+Practicing git and leetcode with different languages.
+Learning some other languages as well.
