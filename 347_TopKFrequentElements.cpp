@@ -7,6 +7,7 @@ public:
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
+        vector<int> ans;  
         unordered_map<string, int> hashMap;
         for(int num:nums) // O(n), unordered map find() is constant
         {
@@ -16,37 +17,40 @@ public:
             }    
             else
             {
-                hashMap[to_string(num)] = 0;
+                hashMap[to_string(num)] = 1;
             }
         }
         
         // map to vector<>        
         vector<numAndCount> heap;
+        numAndCount nul;
+        heap.push_back(nul);
         for(auto hash: hashMap)
         {
             numAndCount tmp;
             tmp.num = atoi(hash.first.c_str());
             tmp.count = hash.second;
             heap.push_back(tmp);
+        }        
+        
+        // build max heap 
+        int heapSize = heap.size() - 1;
+        for (int i = heapSize / 2; i > 0 ; i--) {
+            maxHeapify(heap, i, heapSize);
         }
         
-        // heap sort and take out the max for k times
-        vector<int> ans;        
-        int heapSize = heap.size();
-        for (int _k = 0; _k < k; _k++){
-            // build max heap
-            for (int i = heapSize / 2; i >= 1 ; i--) {
-                maxHeapify(heap, i, heapSize - 1);
-            }
-            
+         // heap sort and take out the max for k time   
+        for (int _k = 0; _k < k; _k++){                      
             // pickTheMax
-            ans.push_back(heap[0].num); 
+            ans.push_back(heap[1].num); 
             
             // switch with the last one for next round
-            swap(heap[0], heap[heapSize - 1]);
+            swap(heap[1], heap[heapSize]);
             
             // don't look at the elements after this size (those elements dealt)
             heapSize--;
+            
+            maxHeapify(heap, 1, heapSize);
         }
         
         return ans;
