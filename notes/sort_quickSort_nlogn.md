@@ -15,14 +15,14 @@ T(n) = 2 * T(n/2) + c1 * n \
      = 2^k * T(n/2^k) + (c1 + c2 + ... + ck) * n \ 
      // T(n/2^k) = T(1) -> 2^k = n -> k = logn \
      = 2^logn + logn * n \
-     = O(n + nlogn) ∈ O(nlogn) \
+     = O(n + nlogn) ∈ O(nlogn) 
 
 ### Worst case: O(n^2)
 T(n) = T(n-1) + c1 * n \
      = T(n-2) + (c1 + c2) * n \
      = .... \
      = (c1 + c2 + ... + cn) * n \
-     = O(n^2) \
+     = O(n^2)
 
 ### Average case: O(nlogn)
 T(n) = T(1) + T(n-1) + c1 * n \
@@ -33,4 +33,4 @@ T(n) = T(1) + T(n-1) + c1 * n \
                 + \
        T(n-1) + T(1) + cn * n \
     --------------------------- \
-       ∈ O(nlogn) \
+       ∈ O(nlogn)

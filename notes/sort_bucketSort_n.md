@@ -9,18 +9,18 @@ and there are 10 buckets to record each digits. \
 Each round see 1 digit, and collect them back at the end of each round. \
 
 - Round one: see the first digit
-    [bucket 0] 
-    [bucket 1] 321, 51 
-    [bucket 2] 732
-    [bucket 3]
-    [bucket 4] 84, 1234, 34
-    [bucket 5]
-    [bucket 6] 76
-    [bucket 7]
-    [bucket 8]
-    [bucket 9] 99
+    [bucket 0] \
+    [bucket 1] 321, 51 \
+    [bucket 2] 732 \
+    [bucket 3] \
+    [bucket 4] 84, 1234, 34 \
+    [bucket 5] \
+    [bucket 6] 76 \
+    [bucket 7] \ 
+    [bucket 8] \
+    [bucket 9] 99 \
 
-    -> nums = [321, 51, 732, 84, 1234, 34, 76, 99]
+    -> nums = [321, 51, 732, 84, 1234, 34, 76, 99] \
 
 - Round two: see the second digit
     [bucket 0] 
