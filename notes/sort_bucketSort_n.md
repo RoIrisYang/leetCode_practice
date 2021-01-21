@@ -17,36 +17,36 @@ Each round see 1 digit, and collect them back at the end of each round. \
     [bucket 5] \
     [bucket 6] 76 \
     [bucket 7] \ 
-    [bucket 8] \
+    [bucket 8] \ 
     [bucket 9] 99 \
 
-    -> nums = [321, 51, 732, 84, 1234, 34, 76, 99] \
+    -> nums = [321, 51, 732, 84, 1234, 34, 76, 99]
 
 - Round two: see the second digit
-    [bucket 0] 
-    [bucket 1] 
-    [bucket 2] 321
-    [bucket 3] 732, 1234, 34,
-    [bucket 4] 
-    [bucket 5] 51
-    [bucket 6] 
-    [bucket 7] 76
-    [bucket 8] 84
-    [bucket 9] 99
+    [bucket 0] \
+    [bucket 1] \
+    [bucket 2] 321 \
+    [bucket 3] 732, 1234, 34 \
+    [bucket 4] \
+    [bucket 5] 51 \
+    [bucket 6] \
+    [bucket 7] 76 \
+    [bucket 8] 84 \
+    [bucket 9] 99 \
 
     -> nums = [321, 732, 1234, 34, 51, 76, 84, 99]
 
 - Round three: see the hundred digit
-    [bucket 0] 34, 51, 76, 84, 99
-    [bucket 1] 
-    [bucket 2] 1234
-    [bucket 3] 321
-    [bucket 4] 
-    [bucket 5]
-    [bucket 6] 
-    [bucket 7] 732
-    [bucket 8]
-    [bucket 9] 
+    [bucket 0] 34, 51, 76, 84, 99 \
+    [bucket 1] \
+    [bucket 2] 1234 \
+    [bucket 3] 321 \
+    [bucket 4] \
+    [bucket 5] \
+    [bucket 6] \
+    [bucket 7] 732 \
+    [bucket 8] \
+    [bucket 9] \
 
     -> nums = [34, 51, 76, 84, 99, 1234, 321, 732]
 
