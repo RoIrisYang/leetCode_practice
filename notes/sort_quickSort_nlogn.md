@@ -1,8 +1,16 @@
 # Quick Sort
 
 - time complexity: nlogn (average case)
+- concept of divide and conquer
 - effective than other sorts in the computation performance
 - c++ build-in library sort implementation by quick sort
+
+## Process
+- pick the rightest one (or any one you like) as pivot.
+- iterate through the array of n, \ 
+  put elements smaller than pivot to the left of the pivot \
+  put elements bigger than pivot to the right of the pivot \
+- recursively do the same with the subset of left elements and the subset of right elements, untill all elements are sorted.
 
 ## Prove
 ### Best case: O(nlogn)
