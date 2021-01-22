@@ -9,7 +9,8 @@ When two integer a, b have the same remainder after divided by integer m, we cal
 
 ## Example
 Try it on leetCode 1015. To find the digits of positive integer N, which formed with 1. \
-Ex. if K == 3, 111 can be divided by 3 -> return 3. \
+Ex. \
+    if K == 3, 111 can be divided by 3 -> return 3. \
     if K == 2, no such positive integer. \
     if K == 17, 1111111111111111 can be divided by 17 -> return 16. \
 
