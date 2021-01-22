@@ -16,7 +16,7 @@
 
 - When building the heap tree, heapify from the last parent node. \
     It will be O(n). See the proof:
-    ![alt text](buildMaxHeapTime.png "Time complexity of building Max Heap" =250x)
+    <img src="buildMaxHeapTime.png" alt="Time complexity of building Max Heap" width="200"/>
 
 ## maxHeapify recursive (c++)
 ```
