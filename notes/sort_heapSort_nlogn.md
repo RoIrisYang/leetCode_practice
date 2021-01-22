@@ -15,7 +15,7 @@
     If you use array in implementation, index 0 is not used beacause of the index manipulation. In the heapify, the left child's index is root * 2. When root is index 0, the left child is still 0. This will let the index 0 element not be dealt.
 
 - When building the heap tree, heapify from the last parent node. \
-    It will be O(n). See the proof:
+    It will be O(n). See the proof: \
     <img src="buildMaxHeapTime.png" alt="Time complexity of building Max Heap" width="200"/>
 
 ## maxHeapify recursive (c++)
