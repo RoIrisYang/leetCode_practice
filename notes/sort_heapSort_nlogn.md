@@ -11,12 +11,12 @@
 5. go to step 2 if size of heap > 0
 
 ## Note and Tips
-- Don't use index 0 in the implementation
+- Don't use index 0 in the implementation \
     If you use array in implementation, index 0 is not used beacause of the index manipulation. In the heapify, the left child's index is root * 2. When root is index 0, the left child is still 0. This will let the index 0 element not be dealt.
 
-- When building the heap tree, heapify from the last parent node.
+- When building the heap tree, heapify from the last parent node. \
     It will be O(n). See the proof:
-    ![alt text](buildMaxHeapTime.png "Time complexity of building Max Heap")
+    ![alt text](buildMaxHeapTime.png "Time complexity of building Max Heap" =250x)
 
 ## maxHeapify recursive (c++)
 ```
