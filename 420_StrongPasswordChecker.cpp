@@ -1,15 +1,55 @@
-/*
-So it's easy to solve for the case that length is less than 6: Math.Max(requiredChar, 6 - s.Length); The requiredChar is at most 3.
-
-For the case, 6<=length<=20, only replacements are needed.
-
-If length is greater than 20, only replacements and deletions are needed.
-*/
-
 class Solution {
 public:
     int strongPasswordChecker(string password) {
+        int length = password.length();
+        if(length == 0) return 6;
         
+        /* Understand the password*/
+        int lowerCase = 0, upperCase = 0, oneDigit = 0;        
+        int insertion = 0, replacement = 0, deletion = 0;
+        
+        vector<char> repeatCheckWindow;
+        for(int i = 0; i < length; i++)
+        {
+            if (48 <= password[i] && password[i] <= 57) oneDigit++;
+            else if (97 <= password[i] && password[i] <= 122) lowerCase++;
+            else if (65 <= password[i] && password[i] <= 90) upperCase++;           
+            
+            repeatCheckWindow.push_back(password[i]);
+            if (repeatCheckWindow.size() >= 3) {
+                if(repeatCheckWindow[0] == repeatCheckWindow[1] && repeatCheckWindow[1] == repeatCheckWindow[2])
+                {
+                    replacement++;
+                    repeatCheckWindow.clear();
+                }
+                else
+                {
+                    repeatCheckWindow.erase(repeatCheckWindow.begin());
+                }
+            }
+        }
+        
+        int missingType = 0;
+        if (!oneDigit) missingType++;
+        if (!lowerCase) missingType++;
+        if (!upperCase) missingType++;
+                
+        // 6 < only insert
+        if(length < 6){ 
+            insertion = 6 - length;
+            return max(missingType, insertion);
+        }
+        
+        // 6 - 20: only replacement
+        else if(length < 20){
+            return max(missingType, replacement);
+        }
+        
+        // > 20: only delete
+        else{
+            deletion = length - 20;
+            return max(max(missingType, replacement), deletion);
+        }
     }
 };
 
