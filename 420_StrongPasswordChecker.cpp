@@ -48,7 +48,7 @@ public:
         // > 20: only delete
         else{
             deletion = length - 20;
-            return max(max(missingType, replacement), deletion);
+            return max(missingType, replacement) + deletion;
         }
     }
 };
