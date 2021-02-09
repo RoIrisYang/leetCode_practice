@@ -1,1 +1,0 @@
-These are only short notes for self reviewing the proving formulas and some specialties of structures and algorithms.
